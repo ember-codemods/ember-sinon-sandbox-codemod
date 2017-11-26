@@ -1,6 +1,7 @@
 // Press ctrl+space for code completion
 module.exports = function(file, api) {
   const j = api.jscodeshift;
+  const root = j(file.source);
 
   function isSandboxAssignment(node) {
     return (
@@ -26,11 +27,16 @@ module.exports = function(file, api) {
     return isSandboxAssignment(node) && isSandboxCreation(node);
   }
 
-  return j(file.source)
-    .find(j.AssignmentExpression)
-    .filter(({ node }) => {
-      return isSandboxCreationExpression(node);
-    })
-    .remove()
-    .toSource();
+  function removeSandboxCreates() {
+    root
+      .find(j.AssignmentExpression)
+      .filter(({ node }) => {
+        return isSandboxCreationExpression(node);
+      })
+      .remove();
+  }
+
+  removeSandboxCreates();
+
+  return root.toSource();
 };
