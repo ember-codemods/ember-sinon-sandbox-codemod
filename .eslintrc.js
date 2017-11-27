@@ -11,18 +11,21 @@ module.exports = {
     es6: true,
   },
   rules: {
-    'prettier/prettier': ['error', {
-      singleQuote: true,
-      trailingComma: 'es5',
-      printWidth: 100,
-    }],
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        trailingComma: 'es5',
+        printWidth: 100,
+      },
+    ],
   },
   overrides: [
     {
       files: ['__tests__/**/*.js'],
       env: {
-        jest: true
-      }
+        jest: true,
+      },
     },
   ],
 };
