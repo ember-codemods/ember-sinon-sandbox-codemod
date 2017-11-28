@@ -18,7 +18,14 @@ module.exports = function(file, api) {
   }
 
   function findMethod(method) {
-    return root.find(j.Property, { key: { name: method } });
+    return root.find(j.Property, {
+      key: {
+        name: method,
+      },
+      value: {
+        type: 'FunctionExpression',
+      },
+    });
   }
 
   function removeSandboxCreate() {

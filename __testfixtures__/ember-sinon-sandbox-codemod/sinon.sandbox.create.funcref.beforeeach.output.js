@@ -1,12 +1,8 @@
 import { moduleForAcceptance, test } from 'ember-qunit';
+import { before } from './before';
 
 moduleForAcceptance('foo', 'Acceptance | Foo', {
-  beforeEach() {
-    // setup the sandbox
-    this.sandbox = sinon.sandbox.create();
-  },
-
-  afterEach() {},
+  beforeEach: before,
 });
 
 test('it happens', function(assert) {
