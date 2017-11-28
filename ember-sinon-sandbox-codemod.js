@@ -85,24 +85,8 @@ module.exports = function(file, api) {
     }
   }
 
-  function addSinonImport() {
-    let body = root.get().value.program.body;
-    let importDeclaration = root.find(j.ImportDeclaration, {
-      source: { value: 'sinon' },
-    });
-
-    if (importDeclaration.length === 0) {
-      importDeclaration = j.importDeclaration(
-        [j.importDefaultSpecifier(j.identifier('sinon'))],
-        j.literal('sinon')
-      );
-      body.unshift(importDeclaration);
-    }
-  }
-
   removeSandboxCreate();
   removeSandboxRestore();
-  addSinonImport();
 
   return root.toSource({
     quote: 'single',
