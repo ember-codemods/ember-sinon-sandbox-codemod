@@ -2,6 +2,8 @@
 ember-sinon-sandbox-codemod
 ==============================================================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/scalvert/ember-sinon-sandbox-codemod.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/scalvert/ember-sinon-sandbox-codemod.svg?branch=master)](https://travis-ci.org/scalvert/ember-sinon-sandbox-codemod)
 
 This codemod is intended to automatically convert projects that use `sinon` explicitly to use `ember-sinon-sandbox`.
