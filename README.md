@@ -1,29 +1,38 @@
+# ember-sinon-sandbox-codemod
 
-ember-sinon-sandbox-codemod
-==============================================================================
 
-[![Build Status](https://travis-ci.org/scalvert/ember-sinon-sandbox-codemod.svg?branch=master)](https://travis-ci.org/scalvert/ember-sinon-sandbox-codemod)
+A collection of codemod's for ember-sinon-sandbox-codemod.
 
-This codemod is intended to automatically convert projects that use `sinon` explicitly to use `ember-sinon-sandbox`.
+## Usage
 
-Installation
-------------------------------------------------------------------------------
-
-Install [`jscodeshift`](https://github.com/facebook/jscodeshift) to run the
-codemod script:
+To run a specific codemod from this project, you would run the following:
 
 ```
-npm install -g jscodeshift
+npx ember-sinon-sandbox-codemod <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
+
+# or
+
+yarn global add ember-sinon-sandbox-codemod
+ember-sinon-sandbox-codemod <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ```
 
-Usage
-------------------------------------------------------------------------------
+## Transforms
 
-```
-jscodeshift -t https://rawgit.com/scalvert/ember-sinon-sandbox-codemod/master/ember-sinon-sandbox-codemod.js ./tests/
-```
+<!--TRANSFORMS_START-->
+<!--TRANSFORMS_END-->
 
-Credit
-------------------------------------------------------------------------------
-ember-sinon-sandbox-codemod is heavily inspired by the work done in [ember-qunit-codemod](https://github.com/rwjblue/ember-qunit-codemod)
-largely by Robert Jackson. Thank you!
+## Contributing
+
+### Installation
+
+* clone the repo
+* change into the repo directory
+* `yarn`
+
+### Running tests
+
+* `yarn test`
+
+### Update Documentation
+
+* `yarn update-docs`

@@ -1,35 +1,21 @@
 {
   "name": "ember-sinon-sandbox-codemod",
-  "version": "0.0.0",
-  "description": "codemod script for ember-sinon-sandbox",
-  "keywords": [
-    "codemod",
-    "qunit",
-    "qunit-dom"
-  ],
-  "homepage": "https://github.com/scalvert/ember-sinon-sandbox-codemod#readme",
-  "bugs": {
-    "url": "https://github.com/scalvert/ember-sinon-sandbox-codemod/issues"
-  },
-  "license": "MIT",
-  "author": "Steve Calvert <steve.calvert@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/scalvert/ember-sinon-sandbox-codemod.git"
-  },
+  "version": "0.1.0",
   "scripts": {
-    "lint": "eslint .",
-    "test": "jest"
+    "test": "codemod-cli test",
+    "update-docs": "codemod-cli update-docs"
   },
+  "bin": "./bin/cli.js",
+  "keywords": [
+    "codemod-cli"
+  ],
   "dependencies": {
-    "jscodeshift": "^0.3.32"
+    "codemod-cli": "^0.2.7"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.6.0",
-    "eslint": "^4.1.0",
-    "eslint-config-prettier": "^2.6.0",
-    "eslint-plugin-prettier": "^2.3.1",
-    "jest": "^21.0.0",
-    "prettier": "^1.7.4"
+    "jest": "^23.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
