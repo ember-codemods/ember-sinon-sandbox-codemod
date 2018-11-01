@@ -4,5 +4,5 @@ const { runTransformTest } = require('codemod-cli');
 
 runTransformTest({
   type: 'jscodeshift',
-  name: 'ember-sinon-sandbox-codemod',
+  name: 'remove-sandbox-create',
 });
