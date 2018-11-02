@@ -1,4 +1,6 @@
-module.exports = function(file, api) {
+const { getParser } = require('codemod-cli').jscodeshift;
+
+module.exports = function transformer(file, api) {
   const j = api.jscodeshift;
   const root = j(file.source);
 

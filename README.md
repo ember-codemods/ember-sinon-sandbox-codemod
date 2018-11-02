@@ -19,7 +19,8 @@ ember-sinon-sandbox-codemod <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ## Transforms
 
 <!--TRANSFORMS_START-->
-* [ember-sinon-sandbox-codemod](transforms/ember-sinon-sandbox-codemod/README.md)
+* [remove-sandbox-create](transforms/remove-sandbox-create/README.md)
+* [remove-sinon-usages](transforms/remove-sinon-usages/README.md)
 <!--TRANSFORMS_END-->
 
 ## Contributing
